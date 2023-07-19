@@ -15,7 +15,7 @@ def load_games_from_db():
 
 def load_game_from_db(id):
   with engine.connect() as conn:
-    result = conn.execute(text(f"SELECT * FROM games WHERE id={id}"))
+    result = conn.execute(text("SELECT * FROM games WHERE id={id}"))
     rows = []
     column_name = result.keys()
     for rowi in result.all():
