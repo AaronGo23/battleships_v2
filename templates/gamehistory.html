@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>history</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/static/pic0.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body class="pt-3">
+    {% include 'nav.html' %}
+    <h3>Game Id</h3>
+    <p>{{game.id}}</p>
+    <h3>Player 1</h3>
+    <p>{{game.player1}}</p>
+    <h3>Player 2</h3>
+    <p>{{game.player2}}</p>
+    <h3>Winner</h3>
+    <p>{{game.winner}}</p>
+    <h3>Winner's score</h3>
+    <p>{{game.winner_score}}</p>
+  </body>
+</html>

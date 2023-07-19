@@ -1,0 +1,49 @@
+from flask import Flask,send_file,
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Battleships</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/static/pic0.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+      #banner{
+        height: 360px;
+        object-fit: cover;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://webapplication.degentekle.repl.co/static/pic1.jpg">
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">The time has come</h1>
+      <div>
+      <a href="https://www.dropbox.com/scl/fo/rf07nz8u7l0dbxi0mdjur/h?dl=0&rlkey=858qiu74m0rxq4p1lmlwsb7ma" type="button" class="btn btn-secondary btn-lg col-2">Download Now</a>
+      <a href="https://webapplication.degentekle.repl.co/fill_history" type="button" class="btn btn-light col-2">Fill your last game's history</a>
+      </div>
+      <h2 class="text-center mt-2 mb-4">About Battleships</h2>
+      <div class="row" style="margin-bottom:16px">
+        <div class="col-md-6">
+      <p class="lead">Place your ships on the playing board. Your opponent will try to guess where your ships are. When it's your turn, try to guess where their ships are by choosing a tile on the opposing board. Try to sink all their battleships to win the game.</p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+      <img src="/static/pic2.jpg" style="height:320px;border-radius:4px;">
+      </div>
+      <h2 class="text-center mt-2 mb-4">Ranking</h2>
+      <div>
+        {% for game in games %}
+          {% include 'gameitem.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center"><a href="mailto:degen.tekle@etu.unige.ch?cc=aaron.gogniat@etu.unige.ch&subject=Encountering%20Issues" class="btn btn-primary btn-lg">Email Us</a>
+      <p class="mt-4">Copyright 2023, Battleships</p></div>
+    </div>
+  </body>
+</html>
